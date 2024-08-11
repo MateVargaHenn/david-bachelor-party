@@ -1,0 +1,7 @@
+{
+  "name": "david-bachelor-party",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
