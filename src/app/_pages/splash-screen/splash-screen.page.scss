@@ -1,0 +1,28 @@
+@import '../../../colors.scss';
+.main-button {
+    --background: var(--neutral-box-100);
+    --color: var(--neutral-text-500);
+}
+ion-content {
+    display: flex;
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 10% auto;
+        .app-img {
+            display: block;
+            position: relative;
+        }
+        .title {
+            position: relative;
+            text-align: center;
+            font-size: 1.7rem;
+            margin-top:1.5rem;
+        }
+        ion-button {
+            margin: 0 auto;
+            --background: var(--neutral-box-100);
+            --color: var(--neutral-text-500);
+        }
+    }
+}

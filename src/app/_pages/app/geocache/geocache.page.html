@@ -1,0 +1,24 @@
+<ion-content class="main-content">
+<google-map class="google-map" [options]="options">
+  @for (location of geocachePoints; track location) {
+  <map-advanced-marker
+  id="mapAdvancedMarker"
+  [position]="{lat: location.Coordinates.latitude, lng: location.Coordinates.longitude}"
+  #markerElem="mapAdvancedMarker"
+  (mapClick)="handleMapClick($event, location.id!, location.Title, location.Description, location.Help, location.CorrectAnswer)"
+  [content]="location.Icon"
+/>
+  }
+  <map-advanced-marker [position]="us" [draggable]="false" [content]="david"></map-advanced-marker>
+</google-map>
+
+<div class="guide">
+  <p>Magyarázat:</p>
+  <ul class="pins">
+    <li><img src="../../../assets/img/pin.png" width="50"/> <span>Megoldandó ládák</span></li>
+    <li><img src="../../../assets/img/pin_success.png" width="50"/> <span>Megoldott ládák</span></li>
+    <li><img src="../../../assets/img/pin_unsuccess.png" width="50"/> <span>Megoldatlan ládák</span></li>
+    <li><img src="../../../assets/img/davidpin.png" width="50"/> <span>GPS pont</span></li>
+  </ul>
+</div>
+</ion-content>

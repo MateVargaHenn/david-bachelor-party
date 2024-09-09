@@ -1,0 +1,78 @@
+@import '../../../../colors.scss';
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    --background: var(--secondary-brand-color-500);
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    .background-content {
+        background-color: #e0b6d1;
+    }
+    .google-map {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: 400px;
+        border: 1px solid #ccc;
+    }
+    .guide {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        color: var(--neutral-text-100);
+        .pins {
+            margin:0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            list-style: none;
+            text-align: center;
+            li {
+                margin: 5px;
+                img {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                span {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.custom-popover {
+    min-width: 550px; /* Set your desired width */
+    min-height: 550px;
+    word-wrap: break-word;
+}
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .google-map {
+        height: 250px; /* Smaller map for mobile */
+        min-width: 100%; /* Smaller map for mobile */
+        .map-container {
+            width: 768px;
+        }
+    }
+
+    .guide {
+        .pins {
+            flex-direction: column; /* Stack the pins vertically on mobile */
+        }
+    }
+
+    .custom-popover {
+        min-width: 90%; /* Reduce width for smaller screens */
+        min-height: 300px; /* Reduce height for mobile */
+    }
+}

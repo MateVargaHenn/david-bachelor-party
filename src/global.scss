@@ -32,6 +32,166 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import "@ionic/angular/css/palettes/dark.always.css"; 
+// @import "@ionic/angular/css/palettes/dark.class.css"; 
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+@import './colors.scss';
+
+  html {
+    body {
+      background-color: #e0b6d1;
+    }
+  }
+  @media (min-width: 50em) {
+    :root {
+      --font-size-body: var(--font-size-500);
+      --font-size-primary-heading: var(--font-size-900);
+      --font-size-secondary-heading: var(--font-size-800);
+      --font-size-nav: var(--font-size-300);
+    }
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  ul[role='list'],
+  ol[role='list'] {
+    list-style-type: none;
+  }
+  body {
+    font-family: var(--font-family-primary);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    min-height: 100vh;
+    text-rendering:optimizeSpeed;
+    line-height: 1.5;
+  }
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  ion-header {
+    --background: var(--brand-color-500);
+  }
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  /* Utility classes */
+  .text-primary-100 {
+    color: var(--brand-color-100);
+  }
+  .text-primary-200 {
+    color: var(--brand-color-200);
+  }
+  .text-primary-300 {
+    color: var(--brand-color-300);
+  }
+  .text-primary-400 {
+    color: var(--brand-color-400);
+  }
+  .text-primary {
+    color: var(--brand-color-500);
+  }
+  .text-primary-600 {
+    color: var(--brand-color-600);
+  }
+  .text-primary-700 {
+    color: var(--brand-color-700);
+  }
+  .text-primary-800 {
+    color: var(--brand-color-800);
+  }
+  .text-primary-900 {
+    color: var(--brand-color-900);
+  }
+  .font-weight-bold { font-weight: var(--font-weight-bold); }
+  .font-weight-semi-bold { font-weight: var(--font-weight-semi-bold); }
+  .font-weight-regular { font-weight: var(--font-weight-regular); }
+  .font-size-primary-heading {
+    font-size: var(--font-size-primary-heading);
+  }
+  .font-size-secondary-heading {
+    font-size: var(--font-size-secondary-heading);
+  }
+  .font-size-300 {
+    font-size: var(--font-size-300);
+  }
+  .font-size-400 {
+    font-size: var(--font-size-400);
+  }
+  .font-size-500 {
+    font-size: var(--font-size-500);
+  }
+  .font-size-600 {
+    font-size: var(--font-size-600);
+  }
+  .font-size-700 {
+    font-size: var(--font-size-700);
+  }
+  .font-size-800 {
+    font-size: var(--font-size-800);
+  }
+  .font-size-900 {
+    font-size: var(--font-size-900);
+  }
+  .text-decoration-none {
+    text-decoration: none;
+  }
+  .text-decoration-underline {
+    text-decoration: underline;
+  }
+  ion-content {
+    --background: var(--brand-color-500);
+  }

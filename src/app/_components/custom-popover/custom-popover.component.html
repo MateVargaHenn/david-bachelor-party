@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-header>
+    <ion-title>
+      <p>{{options.title}}</p>
+    </ion-title>
+  </ion-header>
+  <form (submit)="onSubmit($event)" [formGroup]="fg">
+  <ion-list>
+    <ion-item>
+      {{options.description}}
+    </ion-item>
+    <ion-item *ngIf="!help">
+      <ion-button type="button" (click)="showHelp()">Segítség</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngIf="help">
+      {{options.help}}
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Válasz:" placeholder="Helyes válasz" formControlName="answer"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button type="submit">Mentés</ion-button>
+    </ion-item>
+  </ion-list>
+  
+</form>
+</ion-content>
